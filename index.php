@@ -1,14 +1,4 @@
-<?php
-
-function generaColoreRandom($max) {
-   $characters = "0123456789abcdefghilmnopqstuvzxjywkABCDEFGHILMNOPQRSTUVZXYWKJ@#;<>!?";
-   $str = "";
-   for ($i = 0; $i < $max; $i++) {
-      $str .= $characters[rand(1,strlen($characters))];
-   }
-   return $str;
-}
-?>
+<?php require __DIR__ . '/function.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +22,7 @@ function generaColoreRandom($max) {
             </form>
          </header>
          <main>
-            <h2><?php echo generaColoreRandom($_GET['lunghezza']) ?></h2>
+            <h2 class="text-center text-black bg-white p-5 rounded-5"><?php echo generaColoreRandom($_GET['lunghezza']) ?></h2>
          </main>
       </div>
    </body>
