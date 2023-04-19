@@ -1,16 +1,13 @@
 <?php
 
-$array = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
-
 function generaColoreRandom($max) {
-   $characters = "0123456789abcdef";
+   $characters = "0123456789abcdefghilmnopqstuvzxjywkABCDEFGHILMNOPQRSTUVZXYWKJ@#;<>!?";
    $str = "";
    for ($i = 0; $i < $max; $i++) {
-      $str = $characters[rand(1,strlen($characters))];
+      $str .= $characters[rand(1,strlen($characters))];
    }
    return $str;
 }
-
 ?>
 
 <!DOCTYPE html>
